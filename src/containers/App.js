@@ -31,7 +31,10 @@ class App extends Component {
   }
 }
 
-// setConfig({ logLevel: 'debug' });
+// setConfig({ 
+//   logLevel: 'debug',
+//   hotHooks: true,
+// });
 
 export default hot(module)(App);
 

@@ -8,9 +8,9 @@ i18n
   .use(initReactI18next) // passes i18n down to react-i18next
   .use(LanguageDetector)
   .init({
-    load: 'languageOnly',
     fallbackLng: "en",
     debug: true,
+    // load: 'languageOnly',
     load:['en', 'zh'],
     whitelist:['en', 'zh'],
     // defaultNS: 'common',
