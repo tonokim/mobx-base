@@ -7,7 +7,7 @@ import { Provider } from 'mobx-react'
 import App from "./containers/App"
 import rootStore from './stores'
 
-// import '@/utils/i18n'
+import '@/utils/i18n'
 
 render(
 	<Router>

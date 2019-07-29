@@ -1,29 +1,27 @@
 import i18n from 'i18next'
 import Backend from 'i18next-xhr-backend'
+import LanguageDetector from 'i18next-browser-languagedetector';
 import { useTranslation, initReactI18next } from "react-i18next"
 
 i18n
   .use(Backend)
   .use(initReactI18next) // passes i18n down to react-i18next
+  .use(LanguageDetector)
   .init({
-    
-    lng: "en",
+    load: 'languageOnly',
     fallbackLng: "en",
     debug: true,
+    load:['en', 'zh'],
+    whitelist:['en', 'zh'],
+    // defaultNS: 'common',
+    // ns: ['common'],
 
     interpolation: {
       escapeValue: false
     },
-    // resources: {
-    //   en: {
-    //     translation: {
-    //       "Welcome to React": "Welcome to React and react-i18next"
-    //     }
-    //   },
-    //   zh: {
-    //     translation: {
-    //       "Welcome to React": "欢迎来到 React 和 react-i18next"
-    //     }
-    //   }
-    // },
-  });
+    detection: {
+      caches: ['cookie','localStorage'],
+      lookupCookie: 'lang',
+      lookupLocalStorage: 'lang'
+    }
+  })
