@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react'
 import { inject, observer } from "mobx-react"
+// import { useTranslation, withTranslation, Trans } from 'react-i18next';
 import { Link } from 'react-router-dom'
 
 // @inject("rootStore")
