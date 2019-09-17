@@ -21,7 +21,7 @@ export default class  extends Component {
     const { user } = this.store
     return(
       <div> 
-        <p>Name: {user.name}, Age: {user.age}</p>
+        <p>Nam: {user.name}, Age: {user.age}</p>
         <button onClick={this.onAddAge}>Add</button>
         <h3 styleName="blue">Page1</h3>
         <Link to={{ pathname: '/page2' }}>Go Page2</Link>
