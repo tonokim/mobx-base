@@ -8,12 +8,12 @@ import './page1.less'
 
 // @withTranslation('common')
 @withTranslation(['translation'])
-@inject("rootStore")
+@inject("store")
 @observer
 export default class  extends Component {
   constructor(props){
     super(props)
-    this.store = this.props.rootStore
+    this.store = this.props.store
   }
 
   componentDidMount() {
@@ -35,7 +35,7 @@ export default class  extends Component {
     const { t, i18n } = this.props
     return(
       <div> 
-        <p>Name: {user.name}, Age: {user.age}</p>
+        <p>Nam: {user.name}, Age: {user.age}</p>
         <button onClick={this.onAddAge}>Add</button>
         <p>{t('h1')}</p>
         <p>1233</p>

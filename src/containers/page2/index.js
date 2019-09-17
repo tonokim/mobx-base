@@ -4,7 +4,7 @@ import { inject, observer } from "mobx-react"
 import { useTranslation, withTranslation, Trans } from 'react-i18next'
 import { Link } from 'react-router-dom'
 
-// @inject("rootStore")
+// @inject("store")
 // @observer
 export default function Page2(){
   const { t, i18n } = useTranslation(['common'])
